@@ -1,0 +1,15 @@
+= simple_form_for(@instrument) do |f|
+  = f.error_notification
+  = f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present?
+
+  .form-inputs
+    = f.input :brand
+    = f.input :model
+    = f.input :description
+    = f.input :condition
+    = f.input :finish
+    = f.input :title
+    = f.input :price
+
+  .form-actions
+    = f.button :submit
