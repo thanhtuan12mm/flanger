@@ -1,0 +1,18 @@
+  .row.align-items-center.mt-3
+    .col-md-1
+      = line_item.quantity
+    .col-md-2
+      figure.image
+        = image_tag(line_item.instrument.image_url(:thumb), class:'img-fluid')
+    .col-md-9 
+      strong
+        = line_item.instrument.title
+      .row.align-items-center
+        .content.col-md-9 
+          = truncate(line_item.instrument.description, length: 140)
+        .col-md-3.text-end
+          strong
+            = number_to_currency(line_item.total_price)
+
+  .text-end 
+    = link_to 'Remove Item', line_item, method: :delete, data: { confirm: "Are you sure?" }, class: 'btn btn-sm btn-secondary'

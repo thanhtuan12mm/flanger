@@ -1,0 +1,13 @@
+.keep-shopping.text-end.my-3
+  = link_to 'Keep Shopping', instruments_path, class: 'btn btn-warning'
+section.section.border-top
+  
+  = render(@cart.line_items)
+  
+  .row.border-top.mt-3
+    .col.mt-1
+      = button_to 'Empty Cart', @cart, method: :delete, data: { confirm: "Are you sure?"}, class: 'btn btn-danger'
+    .col.total.mt-3
+      h4.title.text-end
+        span Total: 
+        = number_to_currency(@cart.total_price)

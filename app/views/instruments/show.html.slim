@@ -1,33 +1,66 @@
-p#notice = notice
+- content_for :body_class, 'bg-light'
+section.section.instrument-show
+  .row
+    .col-md-8
+      h1
+        = @instrument.title
 
-p
-  strong Brand:
-  = @instrument.brand
+      ul
+        - if @instrument.brand?
+          li.d-inline.mx-3
+            = @instrument.brand
 
-p
-  strong Model:
-  = @instrument.model
+        - if @instrument.model?
+          li.d-inline.mx-3
+            = @instrument.model
 
-p
-  strong Description:
-  = @instrument.description
+        - if @instrument.condition?
+          li.d-inline.mx-3
+            = @instrument.condition
 
-p
-  strong Condition:
-  = @instrument.condition
+      .feature-image
+        = image_tag(@instrument.image_url(:default))
+      .border.bg-light.rounded.my-3.p-1
+        h3 Description
+        .content 
+          = @instrument.description
+        h3.subtitle.mt-3
+          | Product Specs
+        table.table.table-sm
+          - if @instrument.condition
+            tr
+              td
+                | Condition: 
+              td
+                = @instrument.condition
 
-p
-  strong Finish:
-  = @instrument.finish
+          - if @instrument.finish
+            tr
+              td
+                | Finish: 
+              td
+                = @instrument.finish
 
-p
-  strong Title:
-  = @instrument.title
+          - if @instrument.brand
+            tr
+              td
+                | Brand: 
+              td
+                = @instrument.brand
 
-p
-  strong Price:
-  = @instrument.price
-
-=> link_to 'Edit', edit_instrument_path(@instrument)
-'|
-=< link_to 'Back', instruments_path
+          tr 
+            td
+              | Model: 
+            td
+              = @instrument.model
+    .col-md-3.offset-md-1.mt-3
+      .border.rounded.bg-light
+        h4.title.text-center
+          = number_to_currency(@instrument.price)
+        .text-center.mb-2
+          p.d-inline.fst-italic Sold by: 
+          .fw-bold.d-inline
+            = @instrument.user.name
+        = button_to 'Add to cart', line_items_path(instrument_id: @instrument), class: 'btn btn-warning add-to-cart'
+  - if instrument_author(@instrument)
+    = link_to 'Edit', edit_instrument_path(@instrument), class: 'btn btn-success' 

@@ -17,8 +17,12 @@
  $link: #444;
  $link-hover: #222;
 
- @import 'bulma';
+//  @import 'bulma';
  @import 'functions';
+
+ @import 'bootstrap';
+
+ @import "font-awesome";
 
  .notification {
   border-radius: 0;
@@ -67,4 +71,12 @@
       right: 9px;
     }
   }
+}
+
+.navbar-item {
+  text-decoration: none;
+}
+
+.navbar-item {
+  display: inline-block;
 }
