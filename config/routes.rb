@@ -5,5 +5,5 @@ Rails.application.routes.draw do
   devise_for :users, controllers: {
     registrations: 'registrations'
   }
-  root 'instruments#index'
+  root 'instruments#main'
 end

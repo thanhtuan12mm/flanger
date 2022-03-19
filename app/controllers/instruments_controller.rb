@@ -1,6 +1,10 @@
 class InstrumentsController < ApplicationController
   before_action :set_instrument, only: %i[ show edit update destroy ]
-  before_action :authenticate_user!, except: [:index, :show]
+  before_action :authenticate_user!, except: [:index, :show, :main]
+
+  def main
+    
+  end
 
   def index
     @instruments = Instrument.all.order('created_at desc')
@@ -35,7 +39,7 @@ class InstrumentsController < ApplicationController
 
   def destroy
     @instrument.destroy
-    redirect_to instruments_url, notice: "Instrument was successfully destroyed." }
+    redirect_to instruments_url, notice: "Instrument was successfully destroyed."
   end
 
   private
