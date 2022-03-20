@@ -1,3 +1,31 @@
-section.header-img.position-relative
-  .btn.btn-dark.position-absolute.top-50.start-50.translate-middle
-    h2 SHOP NOW
+/ Header image
+.header-img.position-relative
+  h1.text-center.position-absolute.top-50.start-50.translate-middle.bg-light
+    | SHOP ALL INSTRUMENTS
+  .position-absolute.top-50.start-50.translate-middle.mt-5
+    = button_to 'SHOP NOW', instruments_path, class: 'btn btn-dark btn-lg rounded-pill', method: :get
+
+/ Featured Clothing
+h1.text-center.mt-5.pt-5.pb-5
+  | Featured Clothing
+.container
+  .row 
+    .col-md-4
+      = link_to image_tag(@instruments.first.image_url(:thumb)), @instruments.first
+      br
+      = @instruments.first.title
+      br
+      = number_to_currency(@instruments.first.price)
+    .col-md-4
+      = link_to image_tag(@instruments.second.image_url(:thumb)), @instruments.second
+      br
+      = @instruments.second.title
+      br
+      = number_to_currency(@instruments.second.price)
+    .col-md-4
+      = link_to image_tag(@instruments.third.image_url(:thumb)), @instruments.third
+      br
+      = @instruments.third.title
+      br
+      = number_to_currency(@instruments.third.price)
+    

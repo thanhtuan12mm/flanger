@@ -25,61 +25,54 @@
       <div class="container-fluid">
 
         <%= link_to root_path, class: "navbar-item" do %>
-          <h1 class="navbar-brand">Flanger</h1>
+          <h1 class="navbar-brand m-0">Flanger</h1>
         <% end  %>
 
 
-        <div>
-          <div class="row">
-            <div class="col-md-4">
-              <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <a href="#">
-                  <i class="fa fa-search"></i>
-                </a>
-              </form>
+        <div class='d-flex flex-row align-items-center'>
+          <form class="d-flex align-items-center">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <a href="#" class='me-3'>
+              <i class="fa fa-search"></i>
+            </a>
+          </form>
+
+          <% if cart_has_items %>
+            <%= link_to cart_path(@cart), class:"navbar-item btn btn-light" do %>
+            <span class="icon">
+              <i class="fa fa-shopping-cart"></i>
+            </span>
+            <span>Cart
+              <%= cart_count_over_one %>
+              </span>
+            <% end %>
+          <% end %>
+
+          <% if user_signed_in? %>
+            <%= link_to 'Sell', new_instrument_path, class: "navbar-item button is-dark" %>
+
+            <div class="navbar-item dropdown">
+
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Account
+              </a>
+
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li class="dropdown-item">
+                  <%= link_to current_user.name, edit_user_registration_path, class:"navbar-item" %>
+                </li>
+                <li class="dropdown-item">
+                  <%= link_to "Log Out", destroy_user_session_path, method: :delete, class:"navbar-item" %>
+                </li>
+              </ul>
+
             </div>
 
-            <div class="col-md-4">
-              <% if cart_has_items %>
-                <%= link_to cart_path(@cart), class:"navbar-item btn btn-light" do %>
-                <span class="icon">
-                  <i class="fa fa-shopping-cart"></i>
-                </span>
-                <span>Cart
-                  <%= cart_count_over_one %>
-                  </span>
-                <% end %>
-              <% end %>
-            </div>
+          <% else %>
+            <%= link_to "Sign In", new_user_session_path, class:"navbar-item mx-3"%>
+            <%= link_to "Sign up", new_user_registration_path, class:"navbar-item mx-3"%>
+          <% end %>
 
-            <div class="col-md-4">
-              <% if user_signed_in? %>
-                <%= link_to 'Sell', new_instrument_path, class: "navbar-item button is-dark" %>
-
-                <div class="navbar-item dropdown">
-
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Account
-                  </a>
-
-                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li class="dropdown-item">
-                      <%= link_to current_user.name, edit_user_registration_path, class:"navbar-item" %>
-                    </li>
-                    <li class="dropdown-item">
-                      <%= link_to "Log Out", destroy_user_session_path, method: :delete, class:"navbar-item" %>
-                    </li>
-                  </ul>
-
-                </div>
-              <% else %>
-                <%= link_to "Sign In", new_user_session_path, class:"navbar-item mx-1"%>
-                <%= link_to "Sign up", new_user_registration_path, class:"navbar-item mx-1"%>
-              <% end %>
-            </div>
-
-          </div>
           
         </div>
 
