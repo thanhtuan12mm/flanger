@@ -55,3 +55,31 @@ h1.text-center.mt-5.pt-5.pb-5
       h2.position-absolute.bottom-0.start-0.text-dark.bg-light.cate-text
         | Category 4
 
+/ Featured accessories
+.section-4
+  h1.text-center.mt-5.pt-5.pb-5
+    | Featured Accessories
+  .row
+    .col-md-3.offset-md-3
+      = link_to image_tag(@instruments.first.image_url(:default)), @instruments.first, class: 'random-img'
+      br
+      = link_to @instruments.first.title, @instruments.first, class: 'random-img-title'
+      br
+      = number_to_currency(@instruments.first.price)
+    .col-md-3
+      = link_to image_tag(@instruments.third.image_url(:default)), @instruments.third, class: 'random-img'
+      br
+      = link_to @instruments.third.title, @instruments.third, class: 'random-img-title'
+      br
+      = number_to_currency(@instruments.third.price)
+
+/ Section 5
+.section-5 
+  .row 
+    .col-md-6.offset-md-6
+      .group-text
+        h1 
+          | Reusable Water Bottles
+        p 
+          | Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        = link_to 'SHOP NOW', instruments_path, class: 'btn btn-dark btn-lg rounded-pill mt-5'
