@@ -29,6 +29,7 @@
 .cate-btn {
   margin-bottom: 20px;
   margin-left: 30px;
+  color: white !important;
 }
 
 .container {
@@ -62,4 +63,35 @@
 
 .group-text {
   margin-top: 120px;
+}
+
+.section-5-btn {
+  border: none !important;
+  color: white !important;
+}
+
+.section-5-btn:hover {
+  background-color: white !important;
+  color: black !important;
+}
+
+.header-btn {
+  border: none !important;
+  color: white !important;
+}
+
+.header-btn:hover {
+  background-color: white !important;
+  color: black !important;
+}
+
+.section-6-img {
+  background: image-url('audience.jpg');
+  height: auto;
+  width: 100%;
+}
+
+.section-6 {
+  margin-top: 100px;
+  height: auto;
 }

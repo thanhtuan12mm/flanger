@@ -3,7 +3,7 @@
   h1.text-center.position-absolute.top-50.start-50.translate-middle.bg-light
     | SHOP ALL INSTRUMENTS
   .position-absolute.top-50.start-50.translate-middle.mt-5
-    = button_to 'SHOP NOW', instruments_path, class: 'btn btn-dark btn-lg rounded-pill', method: :get
+    = link_to 'SHOP NOW', instruments_path, class: 'btn btn-dark btn-lg rounded-pill header-btn'
 
 / Featured Clothing
 h1.text-center.mt-5.pt-5.pb-5
@@ -82,4 +82,18 @@ h1.text-center.mt-5.pt-5.pb-5
           | Reusable Water Bottles
         p 
           | Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        = link_to 'SHOP NOW', instruments_path, class: 'btn btn-dark btn-lg rounded-pill mt-5'
+        = link_to 'SHOP NOW', instruments_path, class: 'btn btn-dark btn-lg rounded-pill mt-5 section-5-btn'
+
+/ Section 6
+.container.section-6
+  .row 
+    .col-md-6
+      = image_tag('audience.jpg', class: 'section-6-img')
+    .col-md-6.d-flex.flex-column.align-self-center
+      h1.fw-bold
+        | We are Minimalist
+      p.fs-6.py-2
+        | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas feugiat mattis augue, vitae consectetur felis varius nec. Nam lobortis semper volutpat.
+      p.fs-6
+        | Suspendisse libero metus, commodo et nisl ac, lobortis fringilla quam.
+      
