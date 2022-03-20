@@ -107,4 +107,23 @@ h1.text-center.mt-5.pt-5.pb-5
         = link_to instrument.title, instrument, class: 'section-7-title'
         br
         = number_to_currency(instrument.price)
-      
+
+/ Footer
+.footer
+  .container
+    h1.pt-5
+      = link_to 'Flanger', root_path, class: 'footer-brand'
+    .footer-link-group.pt-5.pb-3
+      a.footer-link href='#'
+        | Guides
+      a.footer-link href='#'
+        | Features
+      a.footer-link href='#'
+        | Integrations
+      a.footer-link href='#'
+        | Contact
+    .powered.d-flex.flex-row.align-items-center.justify-content-center
+      p.m-0.pe-1.powered-by
+        | Powered by
+      a.footer-link.flanger href='#'
+        | Flanger
