@@ -9,23 +9,49 @@
 h1.text-center.mt-5.pt-5.pb-5
   | Featured Clothing
 .container
-  .row 
+  .row
     .col-md-4
-      = link_to image_tag(@instruments.first.image_url(:thumb)), @instruments.first
+      = link_to image_tag(@instruments.first.image_url(:default)), @instruments.first, class: 'random-img'
       br
-      = @instruments.first.title
+      = link_to @instruments.first.title, @instruments.first, class: 'random-img-title'
       br
       = number_to_currency(@instruments.first.price)
     .col-md-4
-      = link_to image_tag(@instruments.second.image_url(:thumb)), @instruments.second
+      = link_to image_tag(@instruments.second.image_url(:default)), @instruments.second, class: 'random-img'
       br
-      = @instruments.second.title
+      = link_to @instruments.second.title, @instruments.second, class: 'random-img-title'
       br
       = number_to_currency(@instruments.second.price)
     .col-md-4
-      = link_to image_tag(@instruments.third.image_url(:thumb)), @instruments.third
+      = link_to image_tag(@instruments.third.image_url(:default)), @instruments.third, class: 'random-img'
       br
-      = @instruments.third.title
+      = link_to @instruments.third.title, @instruments.third, class: 'random-img-title'
       br
       = number_to_currency(@instruments.third.price)
-    
+
+/ Categories grid
+.container.pt-5.mt-5
+  .row.pb-3
+    .col-md-6.cate1.position-relative
+      = link_to image_tag('cate1.jpg'), instruments_path
+      = link_to 'SHOP NOW', instruments_path, class: 'btn btn-primary btn-lg rounded-pill position-absolute bottom-0 start-0 cate-btn'
+      h2.position-absolute.bottom-0.start-0.text-dark.bg-light.cate-text
+        | Category 1
+    .col-md-6.cate2.position-relative
+      = link_to image_tag('cate2.jpg'), instruments_path
+      = link_to 'SHOP NOW', instruments_path, class: 'btn btn-primary btn-lg rounded-pill position-absolute bottom-0 start-0 cate-btn'
+      h2.position-absolute.bottom-0.start-0.text-dark.bg-light.cate-text
+        | Category 2
+
+  .row.pt-2
+    .col-md-6.cate3.position-relative
+      = link_to image_tag('cate3.jpg'), instruments_path
+      = link_to 'SHOP NOW', instruments_path, class: 'btn btn-primary btn-lg rounded-pill position-absolute bottom-0 start-0 cate-btn'
+      h2.position-absolute.bottom-0.start-0.text-dark.bg-light.cate-text
+        | Category 3
+    .col-md-6.cate4.position-relative
+      = link_to image_tag('cate4.jpg'), instruments_path
+      = link_to 'SHOP NOW', instruments_path, class: 'btn btn-primary btn-lg rounded-pill position-absolute bottom-0 start-0 cate-btn'
+      h2.position-absolute.bottom-0.start-0.text-dark.bg-light.cate-text
+        | Category 4
+

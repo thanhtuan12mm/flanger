@@ -13,3 +13,38 @@
   width: 100%;
   background-position: center;
 }
+
+.cate1, .cate2, .cate3, .cate4 {
+  img {
+    height: 400px;
+    width: 100%;
+  }
+}
+
+.cate-text {
+  margin-bottom: 80px;
+  margin-left: 30px;
+}
+
+.cate-btn {
+  margin-bottom: 20px;
+  margin-left: 30px;
+}
+
+.container {
+  width: 60% !important;
+}
+
+.random-img {
+  img {
+    width: 100%;
+  }
+}
+
+.random-img-title {
+  text-decoration: none;
+}
+
+.random-img-title:hover {
+  background-color: transparent;
+}
