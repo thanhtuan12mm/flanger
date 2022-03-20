@@ -96,4 +96,15 @@ h1.text-center.mt-5.pt-5.pb-5
         | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas feugiat mattis augue, vitae consectetur felis varius nec. Nam lobortis semper volutpat.
       p.fs-6
         | Suspendisse libero metus, commodo et nisl ac, lobortis fringilla quam.
+
+/ Section 7
+.container.section-7 
+  .row
+    - @instruments.each do |instrument|
+      .col-md-4.mb-5
+        = link_to image_tag(instrument.image_url(:default)), instrument
+        br
+        = link_to instrument.title, instrument, class: 'section-7-title'
+        br
+        = number_to_currency(instrument.price)
       
