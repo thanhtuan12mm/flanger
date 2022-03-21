@@ -1,3 +1,16 @@
+.header {
+  background: image-url('header-img.webp');
+  height: calc(100vh - 57px);
+  width: 100vw;
+
+  .header-title {
+    font-size: 36px;
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 10px 40px;
+  }
+}
+
 .instrument-show {
   .feature-image img {
     width: 100%;
@@ -7,12 +20,12 @@
   }
 }
 
-.header-img {
-  background: image-url('header-img.webp');
-  height: 800px;
-  width: 100%;
-  background-position: center;
+.category {
+  .category-text {
+
+  }
 }
+
 
 .cate1, .cate2, .cate3, .cate4 {
   img {

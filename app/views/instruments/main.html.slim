@@ -1,9 +1,10 @@
 / Header image
-.header-img.position-relative
-  h1.text-center.position-absolute.top-50.start-50.translate-middle.bg-light
+.header.d-flex.align-items-center.justify-content-center.flex-column
+  h1.header-title.text-center
     | SHOP ALL INSTRUMENTS
-  .position-absolute.top-50.start-50.translate-middle.mt-5
-    = link_to 'SHOP NOW', instruments_path, class: 'btn btn-dark btn-lg rounded-pill header-btn'
+  p.header-subtitle
+    | Shop all the collection.
+  = link_to 'SHOP NOW', instruments_path, class: 'btn btn-main btn-black btn-large'
 
 / Featured Clothing
 h1.text-center.mt-5.pt-5.pb-5
@@ -74,19 +75,19 @@ h1.text-center.mt-5.pt-5.pb-5
       = number_to_currency(@instruments.third.price)
 
 / Section 5
-.section-5 
-  .row 
+.section-5
+  .row
     .col-md-6.offset-md-6
       .group-text
-        h1 
+        h1
           | Reusable Water Bottles
-        p 
+        p
           | Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
         = link_to 'SHOP NOW', instruments_path, class: 'btn btn-dark btn-lg rounded-pill mt-5 section-5-btn'
 
 / Section 6
 .container.section-6
-  .row 
+  .row
     .col-md-6
       = image_tag('audience.jpg', class: 'section-6-img')
     .col-md-6.d-flex.flex-column.align-self-center
@@ -98,7 +99,7 @@ h1.text-center.mt-5.pt-5.pb-5
         | Suspendisse libero metus, commodo et nisl ac, lobortis fringilla quam.
 
 / Section 7
-.container.section-7 
+.container.section-7
   .row
     - @instruments.each do |instrument|
       .col-md-4.mb-5
