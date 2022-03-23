@@ -7,28 +7,32 @@
   = link_to 'SHOP NOW', instruments_path, class: 'btn btn-main btn-black btn-large'
 
 / Featured Clothing
-h1.text-center.mt-5.pt-5.pb-5
-  | Featured Clothing
-.container
-  .row
-    .col-md-4
-      = link_to image_tag(@instruments.first.image_url(:default)), @instruments.first, class: 'random-img'
-      br
-      = link_to @instruments.first.title, @instruments.first, class: 'random-img-title'
-      br
-      = number_to_currency(@instruments.first.price)
-    .col-md-4
-      = link_to image_tag(@instruments.second.image_url(:default)), @instruments.second, class: 'random-img'
-      br
-      = link_to @instruments.second.title, @instruments.second, class: 'random-img-title'
-      br
-      = number_to_currency(@instruments.second.price)
-    .col-md-4
-      = link_to image_tag(@instruments.third.image_url(:default)), @instruments.third, class: 'random-img'
-      br
-      = link_to @instruments.third.title, @instruments.third, class: 'random-img-title'
-      br
-      = number_to_currency(@instruments.third.price)
+.featured-clothing
+  h1.text-center.mt-5.pt-5.pb-5.featured-clothing-text
+    | Featured Clothing
+  .container.featured-clothing-item
+    .row
+      .col-md-4
+        .featured-clothing-item-img
+          = link_to image_tag(@instruments.first.image_url(:default)), @instruments.first
+        .featured-clothing-item-title
+          = link_to @instruments.first.title, @instruments.first
+        .featured-clothing-item-price
+          = number_to_currency(@instruments.first.price)
+      .col-md-4
+        .featured-clothing-item-img
+          = link_to image_tag(@instruments.second.image_url(:default)), @instruments.second
+        .featured-clothing-item-title
+          = link_to @instruments.second.title, @instruments.second
+        .featured-clothing-item-price
+          = number_to_currency(@instruments.second.price)
+      .col-md-4
+        .featured-clothing-item-img
+          = link_to image_tag(@instruments.third.image_url(:default)), @instruments.third
+        .featured-clothing-item-title
+          = link_to @instruments.third.title, @instruments.third
+        .featured-clothing-item-price
+          = number_to_currency(@instruments.third.price)
 
 / Categories grid
 .container.pt-5.mt-5

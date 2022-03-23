@@ -20,9 +20,39 @@
   }
 }
 
+.featured-clothing {
+  .featured-clothing-text {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.1;
+  }
+
+  .featured-clothing-item {
+    .featured-clothing-item-img {
+      img {
+        width: 100%;
+      }
+    }
+
+    .featured-clothing-item-title {
+      margin: 16px 0 12px;
+      a {
+        text-decoration: none;
+        color: #000;
+        font-size: 14px;
+      }
+    }
+
+    .featured-clothing-item-price {
+      font-size: 16px;
+      font-weight: 400;
+    }
+  }
+}
+
 .category {
   .category-text {
-
+    
   }
 }
 
