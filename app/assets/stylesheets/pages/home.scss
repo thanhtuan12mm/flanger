@@ -15,6 +15,7 @@
   .feature-image img {
     width: 100%;
   }
+
   .add-to-cart {
     width: 100%;
   }
@@ -54,14 +55,17 @@
 .category-grid {
   padding-bottom: 70px;
   padding-top: 120px;
+
   .category {
     width: 525px !important;
     padding: 0;
+
     img {
       height: 428px;
       width: 100%;
       object-fit: cover;
     }
+
     .category-title {
       margin-bottom: 85px;
       margin-left: 30px;
@@ -69,6 +73,7 @@
       font-size: 25px;
       font-weight: 700;
     }
+
     .category-btn {
       margin-bottom: 20px;
       margin-left: 30px;
@@ -84,6 +89,7 @@
 .featured-accessories {
   height: 900px;
   background-color: #FAFBFC;
+  
   .featured-accessories-text {
     margin-bottom: 60px;
     padding-top: 60px;
@@ -91,6 +97,7 @@
 
   .featured-accessories-item {
     width: 384px;
+
     .featured-accessories-img {
       img {
         width: 100%;
@@ -112,38 +119,39 @@
       font-weight: 400;
     }
   }
-  }
+}
   
-
-.section-5 {
+.reusable-bottles {
+  position: relative;
   height: 420px;
   background: image-url('bottle.jpg');
-  background-position: center
+  background-position: center;
+
+  .reusable-bottles-group-text {
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+
+    h1 {
+      font-weight: 700;
+      line-height: 1.1;
+      font-size: 40px;
+      margin-bottom: 16px;
+    }
+    
+    p {
+      font-weight: 100;
+      line-height: 1.6;
+      font-size: 15px;
+    }
+  }
+
+  .reusable-bottles-btn {
+    margin-top: 60px;
+  }
 }
 
-.group-text {
-  margin-top: 120px;
-}
-
-.section-5-btn {
-  border: none !important;
-  color: white !important;
-}
-
-.section-5-btn:hover {
-  background-color: white !important;
-  color: black !important;
-}
-
-.header-btn {
-  border: none !important;
-  color: white !important;
-}
-
-.header-btn:hover {
-  background-color: white !important;
-  color: black !important;
-}
 
 .section-6-img {
   background: image-url('audience.jpg');

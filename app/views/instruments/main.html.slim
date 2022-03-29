@@ -77,16 +77,17 @@
         = link_to @instruments.third.title, @instruments.third
       .featured-accessories-price
         = number_to_currency(@instruments.third.price)
-/ Section 5
-.section-5
+/ Reusable Water Bottles
+.reusable-bottles
   .row
     .col-md-6.offset-md-6
-      .group-text
+      .reusable-bottles-group-text
         h1
           | Reusable Water Bottles
         p
           | Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        = link_to 'SHOP NOW', instruments_path, class: 'btn btn-dark btn-lg rounded-pill mt-5 section-5-btn'
+        .reusable-bottles-btn
+        = link_to 'SHOP NOW', instruments_path, class: 'btn btn-main btn-black btn-large'
 
 / Section 6
 .container.section-6
