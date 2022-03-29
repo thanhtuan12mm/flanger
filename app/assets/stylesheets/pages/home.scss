@@ -152,31 +152,58 @@
   }
 }
 
-
-.section-6-img {
-  background: image-url('audience.jpg');
-  height: auto;
-  width: 100%;
-}
-
-.section-6 {
+.we-are-minimalist {
   margin-top: 100px;
   height: auto;
-}
 
-.section-7 {
-  margin-top: 100px;
-  img {
-    width: 100%;
+  .we-are-minimalist-img {
+    img {
+      height: auto;
+      width: 100%;
+    }
+  }
+
+  .we-are-minimalist-text {
+    h1 {
+      font-weight: bold;
+      font-size: 35px;
+      margin-bottom: 15px;
+    }
+
+    p {
+      font-weight: 100;
+      line-height: 1.6;
+      font-size: 15px;
+    }
   }
 }
 
-.section-7-title {
-  text-decoration: none;
-}
 
-.section-7-title:hover {
-  background-color: transparent;
+
+.more-instruments {
+  margin-top: 100px;
+  .more-instruments-item {
+    .more-instruments-img {
+      img {
+        width: 100%;
+      }
+    }
+
+    .more-instruments-title {
+      margin: 16px 0 12px;
+        a {
+          text-decoration: none;
+          color: #000;
+          font-size: 14px;
+          font-weight: 500;
+        }
+    }
+
+    .more-instruments-price {
+      font-size: 16px;
+      font-weight: 400;
+    }
+  }
 }
 
 .footer {

@@ -89,29 +89,30 @@
         .reusable-bottles-btn
         = link_to 'SHOP NOW', instruments_path, class: 'btn btn-main btn-black btn-large'
 
-/ Section 6
-.container.section-6
+/ We Are Minimalist
+.we-are-minimalist.container
   .row
-    .col-md-6
-      = image_tag('audience.jpg', class: 'section-6-img')
-    .col-md-6.d-flex.flex-column.align-self-center
-      h1.fw-bold
+    .we-are-minimalist-img.col-md-6
+      = image_tag('audience.jpg')
+    .we-are-minimalist-text.col-md-6.d-flex.flex-column.align-self-center
+      h1
         | We are Minimalist
-      p.fs-6.py-2
+      p
         | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas feugiat mattis augue, vitae consectetur felis varius nec. Nam lobortis semper volutpat.
-      p.fs-6
+      p
         | Suspendisse libero metus, commodo et nisl ac, lobortis fringilla quam.
 
-/ Section 7
-.container.section-7
+/ More Instruments
+.more-instruments.container
   .row
     - @instruments.each do |instrument|
-      .col-md-4.mb-5
-        = link_to image_tag(instrument.image_url(:default)), instrument
-        br
-        = link_to instrument.title, instrument, class: 'section-7-title'
-        br
-        = number_to_currency(instrument.price)
+      .more-instruments-item.col-md-4.mb-5
+        .more-instruments-img
+          = link_to image_tag(instrument.image_url(:default)), instrument
+        .more-instruments-title
+          = link_to instrument.title, instrument, class: 'section-7-title'
+        .more-instruments-price
+          = number_to_currency(instrument.price)
 
 / Footer
 .footer
