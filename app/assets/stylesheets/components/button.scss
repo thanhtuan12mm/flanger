@@ -26,4 +26,14 @@
     font-size: 24px;
     line-height: 35px;
   }
+
+  &.category-btn {
+    margin-bottom: 20px;
+    margin-left: 30px;
+    font-weight: 250;
+    &:hover {
+      background-color: #3D76F0;
+    }
+  }
 }
+

@@ -50,29 +50,28 @@
   }
 }
 
-.category {
-  .category-text {
-    
+.category-grid {
+  .category {
+    width: 525px !important;
+    padding: 0;
+    img {
+      height: 428px;
+      width: 100%;
+      object-fit: cover;
+    }
+    .category-title {
+      margin-bottom: 85px;
+      margin-left: 30px;
+      line-height: 1.1;
+      font-size: 25px;
+      font-weight: 700;
+    }
+    .category-btn {
+      margin-bottom: 20px;
+      margin-left: 30px;
+      color: white !important;
+    }
   }
-}
-
-
-.cate1, .cate2, .cate3, .cate4 {
-  img {
-    height: 400px;
-    width: 100%;
-  }
-}
-
-.cate-text {
-  margin-bottom: 80px;
-  margin-left: 30px;
-}
-
-.cate-btn {
-  margin-bottom: 20px;
-  margin-left: 30px;
-  color: white !important;
 }
 
 .container {
