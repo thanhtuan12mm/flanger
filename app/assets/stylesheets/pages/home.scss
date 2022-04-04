@@ -82,10 +82,6 @@
   }
 }
 
-.container {
-  width: 60% !important;
-}
-
 .featured-accessories {
   height: 900px;
   background-color: #FAFBFC;
@@ -210,37 +206,50 @@
   margin-top: 80px;
   height: 300px;
   background-color: #FAFBFC;
+
+  .footer-brand {
+    color: black !important;
+    text-decoration: none;
+    &:hover {
+      background-color: transparent;
+    }
+  }
+
+  .footer-link-group {
+    .footer-link {
+      color: black !important;
+      text-decoration: none;
+      margin-right: 15px;
+      &:hover {
+        background-color: transparent;
+        color: grey !important;
+      }
+    }
+  }
+
+  .powered {
+    padding-top: 20px;
+    border-top: 1px solid lightgrey;
+
+    .footer-link {
+      color: black !important;
+      text-decoration: none;
+      &:hover {
+        background-color: transparent;
+        color: grey !important;
+      }
+    }
+
+    .powered-by {
+      color: grey;
+    }
+
+    .flanger {
+      margin-bottom: 1px;
+    }
+  }
 }
 
-.footer-link {
-  color: black !important;
-  text-decoration: none;
-  margin-right: 15px;
-}
-
-.footer-link:hover {
-  background-color: transparent;
-  color: grey !important;
-}
-
-.powered {
-  padding-top: 20px;
-  border-top: 1px solid lightgrey;
-}
-
-.powered-by {
-  color: grey;
-}
-
-.flanger {
-  margin-bottom: 1px;
-}
-
-.footer-brand {
-  color: black !important;
-  text-decoration: none;
-}
-
-.footer-brand:hover {
-  background-color: transparent;
+.container {
+  width: 60% !important;
 }
