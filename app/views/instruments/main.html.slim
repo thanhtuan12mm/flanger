@@ -65,7 +65,7 @@
   .row.d-flex.justify-content-center
     .featured-accessories-item.col-md-3
       .featured-accessories-img
-        = link_to image_tag(@instruments.first.image_url(:default)), @instruments.first
+        = link_to image_tag(@instruments.first.image_url(:default), class: 'test-class'), @instruments.first
       .featured-accessories-title
         = link_to @instruments.first.title, @instruments.first
       .featured-accessories-price
@@ -110,26 +110,6 @@
         .more-instruments-img
           = link_to image_tag(instrument.image_url(:default)), instrument
         .more-instruments-title
-          = link_to instrument.title, instrument, class: 'section-7-title'
+          = link_to instrument.title, instrument
         .more-instruments-price
           = number_to_currency(instrument.price)
-
-/ Footer
-.footer
-  .container
-    h1.pt-5
-      = link_to 'Flanger', root_path, class: 'footer-brand'
-    .footer-link-group.pt-5.pb-3
-      a.footer-link href='#'
-        | Guides
-      a.footer-link href='#'
-        | Features
-      a.footer-link href='#'
-        | Integrations
-      a.footer-link href='#'
-        | Contact
-    .powered.d-flex.flex-row.align-items-center.justify-content-center
-      p.m-0.pe-1.powered-by
-        | Powered by
-      a.footer-link.flanger href='#'
-        | Flanger

@@ -1,40 +1,113 @@
-// .instrument-index-grid {
-//   display: grid;
-//   grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+.instrument-info {
+  .instrument-title {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 15px;
+  }
 
-//   .instrument {
-//     border-left: 0;
-//     border-top: 0;
-//     position: relative;
-//     min-height: 375px;
+  .instrument-price {
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 25px;
+  }
 
-//     .title {
-//       line-height: 1.6rem;
-//     }
-//     .price {
-//       position: absolute;
-//       bottom: 10px;
-//       right: 10px;
-//     }
-//   }
+  .instrument-solder {
+    border-top: 1px solid lightgray;
+    padding-top: 30px;
 
-//   .instrument-thumb {
-//     position: relative;
-//     max-height: 150px;
-//     overflow: hidden;
+    .sold-by {
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 1.6;
+    }
+  }
 
-//     img {
-//       max-width: 100%;
-//       width: 100%;
-//       &:hover {
-//         opacity: .9;
-//       }
-//     }
+  .btn-atc {
+    background-color: #3c76f0;
+    border-radius: 2px;
+    font-size: 15px;
+    font-weight: 500;
+    color: white;
+    width: 100%;
+  }
 
-//     .condition {
-//       position: absolute;
-//       bottom: 10px;
-//       right: 9px;
-//     }
-//   }
-// }
+  .btn-edit {
+    background-color: lightgreen;
+    border-radius: 2px;
+    font-size: 15px;
+    font-weight: 500;
+    color: white;
+    width: 100%;
+  }
+}
+
+.instrument-description-header {
+  font-size: 13px;
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.instrument-description {
+  font-size: 16px;
+  font-weight: 100;
+  line-height: 1.6;
+}
+
+.instrument-specs-header {
+  font-size: 13px;
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.instrument-specs {
+  line-height: 1.6;
+
+  .left-col {
+    font-size: 14px;
+    color: #999;
+    font-weight: 700;
+  }
+
+  .right-col {
+    font-size: 14px;
+    font-weight: 100;
+  }
+}
+
+.suggestion-header {
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.suggestion-instrument {
+  .suggestion-instrument-img {
+    img {
+      width: 100%;
+    }
+  }
+
+  .suggestion-instrument-title {
+    margin: 16px 0 12px;
+
+    a {
+      text-decoration: none;
+      color: #000;
+      font-size: 14px;
+      font-weight: 500;
+    }
+  }
+
+  .suggestion-instrument-price {
+    font-size: 16px;
+    font-weight: 400;
+  }
+}
+
+.instrument-show.container {
+  width: 40% !important;
+}

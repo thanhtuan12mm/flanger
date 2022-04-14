@@ -11,6 +11,7 @@ class InstrumentsController < ApplicationController
   end
 
   def show
+    @instruments = Instrument.all
   end
 
   def new

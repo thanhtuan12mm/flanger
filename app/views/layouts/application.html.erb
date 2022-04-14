@@ -86,5 +86,29 @@
     <%= yield %>
 
   </div>
+  <div class="footer">
+    <div class="container">
+      <h1 class="pt-5">
+        <%= link_to 'Flanger', root_path, class: 'footer-brand' %>
+      </h1>
+      <div class="footer-link-group pt-5 pb-3">
+        <a class="footer-link" href="#">
+          Guides
+        </a><a class="footer-link" href="#">
+          Features
+        </a><a class="footer-link" href="#">
+          Integrations
+        </a><a class="footer-link" href="#">
+          Contact
+        </a></div>
+      <div class="powered d-flex flex-row align-items-center justify-content-center">
+        <p class="m-0 pe-1 powered-by">
+          Powered by
+        </p>
+        <a class="footer-link flanger" href="#">
+          Flanger
+        </a></div>
+    </div>
+  </div>
   </body>
 </html>
