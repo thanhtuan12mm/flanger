@@ -1,66 +1,64 @@
-- content_for :body_class, 'bg-light'
-section.section.instrument-show
-  .row
-    .col-md-8
-      h1
+.instrument-show.container
+  .row.pt-5.mt-4
+    .instrument-img.col-md-7.d-flex.justify-content-end
+      = image_tag(@instrument.image_url(:default))
+    .instrument-info.col-md-5.ps-4
+      .instrument-title
         = @instrument.title
+      .instrument-price
+        = number_to_currency(@instrument.price)
+      .instrument-solder
+        p.sold-by.d-inline Sold by: 
+        .fw-bold.d-inline
+          = @instrument.user.name
+      = button_to 'Add To Cart', line_items_path(instrument_id: @instrument), class: 'btn btn-atc'
+      - if instrument_author(@instrument)
+        = link_to 'Edit', edit_instrument_path(@instrument), class: 'btn btn-edit mt-2' 
 
-      ul
-        - if @instrument.brand?
-          li.d-inline.mx-3
-            = @instrument.brand
-
-        - if @instrument.model?
-          li.d-inline.mx-3
-            = @instrument.model
-
-        - if @instrument.condition?
-          li.d-inline.mx-3
-            = @instrument.condition
-
-      .feature-image
-        = image_tag(@instrument.image_url(:default))
-      .border.bg-light.rounded.my-3.p-1
-        h3 Description
-        .content 
-          = @instrument.description
-        h3.subtitle.mt-3
-          | Product Specs
-        table.table.table-sm
+  .row.pt-5.mt-4.pb-5
+    .col-md-7
+      p.instrument-description-header Description
+      .instrument-description 
+        = @instrument.description
+    .col-md-5.ps-4
+      p.instrument-specs-header Product Specs
+      .instrument-specs
+        table.table.table-borderless.table-sm
           - if @instrument.condition
             tr
-              td
-                | Condition: 
-              td
+              td.left-col
+                | Condition
+              td.right-col
                 = @instrument.condition
 
           - if @instrument.finish
             tr
-              td
-                | Finish: 
-              td
+              td.left-col
+                | Finish
+              td.right-col
                 = @instrument.finish
 
           - if @instrument.brand
             tr
-              td
-                | Brand: 
-              td
+              td.left-col
+                | Brand 
+              td.right-col
                 = @instrument.brand
 
           tr 
-            td
-              | Model: 
-            td
+            td.left-col
+              | Model
+            td.right-col
               = @instrument.model
-    .col-md-3.offset-md-1.mt-3
-      .border.rounded.bg-light
-        h4.title.text-center
-          = number_to_currency(@instrument.price)
-        .text-center.mb-2
-          p.d-inline.fst-italic Sold by: 
-          .fw-bold.d-inline
-            = @instrument.user.name
-        = button_to 'Add to cart', line_items_path(instrument_id: @instrument), class: 'btn btn-warning add-to-cart'
-  - if instrument_author(@instrument)
-    = link_to 'Edit', edit_instrument_path(@instrument), class: 'btn btn-success' 
+
+  .suggestion-header.pt-5.mt-4.pb-4
+    p You May Also Like 
+  .row.pb-5
+    - @instruments.shuffle.first(3).each do |instrument|
+      .suggestion-instrument.col-md-4
+        .suggestion-instrument-img
+          = link_to image_tag(instrument.image_url(:default)), instrument
+        .suggestion-instrument-title
+          = link_to instrument.title, instrument
+        .suggestion-instrument-price
+          = number_to_currency(instrument.price)

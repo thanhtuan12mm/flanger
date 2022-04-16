@@ -1,0 +1,115 @@
+/ Header image
+.header.d-flex.align-items-center.justify-content-center.flex-column
+  h1.header-title.text-center
+    | SHOP ALL INSTRUMENTS
+  p.header-subtitle
+    | Shop all the collection.
+  = link_to 'SHOP NOW', instruments_path, class: 'btn btn-main btn-black btn-large'
+
+/ Featured Clothing
+.featured-clothing
+  h1.text-center.mt-5.pt-5.pb-5.featured-clothing-text
+    | Featured Clothing
+  .container.featured-clothing-item
+    .row
+      .col-md-4
+        .featured-clothing-item-img
+          = link_to image_tag(@instruments.first.image_url(:default)), @instruments.first
+        .featured-clothing-item-title
+          = link_to @instruments.first.title, @instruments.first
+        .featured-clothing-item-price
+          = number_to_currency(@instruments.first.price)
+      .col-md-4
+        .featured-clothing-item-img
+          = link_to image_tag(@instruments.second.image_url(:default)), @instruments.second
+        .featured-clothing-item-title
+          = link_to @instruments.second.title, @instruments.second
+        .featured-clothing-item-price
+          = number_to_currency(@instruments.second.price)
+      .col-md-4
+        .featured-clothing-item-img
+          = link_to image_tag(@instruments.third.image_url(:default)), @instruments.third
+        .featured-clothing-item-title
+          = link_to @instruments.third.title, @instruments.third
+        .featured-clothing-item-price
+          = number_to_currency(@instruments.third.price)
+
+/ Categories grid
+.category-grid.container
+  .row.pb-3.d-flex.justify-content-center
+    .category.col-md-6.position-relative.m-3
+      = link_to image_tag('cate1.jpg'), instruments_path
+      = link_to 'SHOP NOW', instruments_path, class: 'btn position-absolute bottom-0 start-0 btn-main category-btn'
+      h2.category-title.category-title.position-absolute.bottom-0.start-0.text-dark.bg-light
+        | Hoodies
+    .category.col-md-6.position-relative.m-3
+      = link_to image_tag('cate2.jpg'), instruments_path
+      = link_to 'SHOP NOW', instruments_path, class: 'btn position-absolute bottom-0 start-0 btn-main category-btn'
+      h2.category-title.position-absolute.bottom-0.start-0.text-dark.bg-light
+        | T-Shirts
+    .category.col-md-6.position-relative.m-3
+      = link_to image_tag('cate3.jpg'), instruments_path
+      = link_to 'SHOP NOW', instruments_path, class: 'btn position-absolute bottom-0 start-0 btn-main category-btn'
+      h2.category-title.position-absolute.bottom-0.start-0.text-dark.bg-light
+        | Ruby
+    .category.col-md-6.position-relative.m-3
+      = link_to image_tag('cate4.jpg'), instruments_path
+      = link_to 'SHOP NOW', instruments_path, class: 'btn position-absolute bottom-0 start-0 btn-main category-btn'
+      h2.category-title.position-absolute.bottom-0.start-0.text-dark.bg-light
+        | Solidus
+
+/ Featured accessories
+.featured-accessories
+  h1.featured-accessories-text.text-center
+    | Featured Accessories
+  .row.d-flex.justify-content-center
+    .featured-accessories-item.col-md-3
+      .featured-accessories-img
+        = link_to image_tag(@instruments.first.image_url(:default), class: 'test-class'), @instruments.first
+      .featured-accessories-title
+        = link_to @instruments.first.title, @instruments.first
+      .featured-accessories-price
+        = number_to_currency(@instruments.first.price)
+    .featured-accessories-item.col-md-3
+      .featured-accessories-img
+        = link_to image_tag(@instruments.third.image_url(:default)), @instruments.third
+      .featured-accessories-title
+        = link_to @instruments.third.title, @instruments.third
+      .featured-accessories-price
+        = number_to_currency(@instruments.third.price)
+/ Reusable Water Bottles
+.reusable-bottles
+  .row
+    .col-md-6.offset-md-6
+      .reusable-bottles-group-text
+        h1
+          | Reusable Water Bottles
+        p
+          | Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        .reusable-bottles-btn
+        = link_to 'SHOP NOW', instruments_path, class: 'btn btn-main btn-black btn-large'
+
+/ We Are Minimalist
+.we-are-minimalist.container
+  .row
+    .we-are-minimalist-img.col-md-6
+      = image_tag('audience.jpg')
+    .we-are-minimalist-text.col-md-6.d-flex.flex-column.align-self-center
+      h1
+        | We are Minimalist
+      p
+        | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas feugiat mattis augue, vitae consectetur felis varius nec. Nam lobortis semper volutpat.
+      p
+        | Suspendisse libero metus, commodo et nisl ac, lobortis fringilla quam.
+
+/ More Instruments
+.more-instruments.container
+  .row
+    - @instruments.each do |instrument|
+      .more-instruments-item.col-md-4.mb-5
+        .more-instruments-img
+          = link_to image_tag(instrument.image_url(:default)), instrument
+        .more-instruments-title
+          = link_to instrument.title, instrument
+        .more-instruments-price
+          = number_to_currency(instrument.price)

@@ -1,0 +1,39 @@
+.btn-main {
+  background: #3D76F0;
+  padding: 15px 25px;
+  border-radius: 50px;
+  color: #fff;
+  font-size: 16px;
+  line-height: 18px;
+
+  &:hover {
+    background: #24282F;
+    color: #fff;
+  }
+
+  &.btn-black {
+    background: #24282F;
+    color: #fff;
+
+    &:hover {
+      background: #fff;
+      color: #24282F;
+    }
+  }
+
+  &.btn-large {
+    padding: 15px 35px;
+    font-size: 24px;
+    line-height: 35px;
+  }
+
+  &.category-btn {
+    margin-bottom: 20px;
+    margin-left: 30px;
+    font-weight: 250;
+    &:hover {
+      background-color: #3D76F0;
+    }
+  }
+}
+

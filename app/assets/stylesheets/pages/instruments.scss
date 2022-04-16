@@ -1,0 +1,113 @@
+.instrument-info {
+  .instrument-title {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 15px;
+  }
+
+  .instrument-price {
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 25px;
+  }
+
+  .instrument-solder {
+    border-top: 1px solid lightgray;
+    padding-top: 30px;
+
+    .sold-by {
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 1.6;
+    }
+  }
+
+  .btn-atc {
+    background-color: #3c76f0;
+    border-radius: 2px;
+    font-size: 15px;
+    font-weight: 500;
+    color: white;
+    width: 100%;
+  }
+
+  .btn-edit {
+    background-color: lightgreen;
+    border-radius: 2px;
+    font-size: 15px;
+    font-weight: 500;
+    color: white;
+    width: 100%;
+  }
+}
+
+.instrument-description-header {
+  font-size: 13px;
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.instrument-description {
+  font-size: 16px;
+  font-weight: 100;
+  line-height: 1.6;
+}
+
+.instrument-specs-header {
+  font-size: 13px;
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.instrument-specs {
+  line-height: 1.6;
+
+  .left-col {
+    font-size: 14px;
+    color: #999;
+    font-weight: 700;
+  }
+
+  .right-col {
+    font-size: 14px;
+    font-weight: 100;
+  }
+}
+
+.suggestion-header {
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.suggestion-instrument {
+  .suggestion-instrument-img {
+    img {
+      width: 100%;
+    }
+  }
+
+  .suggestion-instrument-title {
+    margin: 16px 0 12px;
+
+    a {
+      text-decoration: none;
+      color: #000;
+      font-size: 14px;
+      font-weight: 500;
+    }
+  }
+
+  .suggestion-instrument-price {
+    font-size: 16px;
+    font-weight: 400;
+  }
+}
+
+.instrument-show.container {
+  width: 40% !important;
+}
