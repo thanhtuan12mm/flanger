@@ -54,7 +54,7 @@
   .suggestion-header.pt-5.mt-4.pb-4
     p You May Also Like 
   .row.pb-5
-    - @instruments.shuffle.first(3).each do |instrument|
+    - @instruments.sample(3).each do |instrument|
       .suggestion-instrument.col-md-4
         .suggestion-instrument-img
           = link_to image_tag(instrument.image_url(:default)), instrument
